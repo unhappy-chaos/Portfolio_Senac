@@ -1,0 +1,12 @@
+Bom dia, boa tarde ou boa noite dependendo do horário em que esteja lendo, este documento de texto tem o propósito de lhe fornecer explicações sobre porque eu fiz o que fiz
+ na criação do projeto e [ as vezes até como fiz ] deixar alguns comentários que eu consideraria relevantes futuramente, não só para mim mas para aqueles que forem ler meu código.
+
+Ponto em que se encontra o portfólio: Apesar dos atrasos e distrações em sala, seus materiais foram de grande ajuda para adição de todos fundamentos que estão aplicados
+ na base do portfólio ainda incompleto.
+
+Acredito que a falta de conteúdo a se apresentar pelas páginas se dá pela troca de decisões em meio ao projeto, sendo que na primeira
+ parte eu foquei em priorizar o visual e quantia do site e em segundo [ Praticamente ao refazr ele ]
+ em aplicar seus ensinamentos diretamente e explicar cada um deles via comentando o código.
+  
+Começando pela estrutura de organização do site onde a nomenclatura está de acordo e também a divisão de arquivos, o conteúdo em
+ si do site foi reutilizado de um projeto antigom, portanto não ligue para as escritas :v
