@@ -15,18 +15,22 @@
     --aqua-thmed: #2bdfdf;
     --purple-themed: #551a8b;
     --blue-themed: #007BFF;
-    
     --dark-themed: #23252b;
+
     --titles-one: 4em;
     --titles-too: 3em;
     --titles-three: 2em;
     --normal-text: 1em;
+
     --main-listyle: none;
 }
 
 *{
-    margin: 0;
-    padding: 0;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   list-style-type: none;
+   text-decoration: none;
 } /* Asterisco se refere a todos elementos do website, zerar a margine o padding é para remover as configurações padrão do navegador envolvendo eles */
 
 main {
@@ -44,34 +48,6 @@ body {
     color: var(--main-dark-color);
     font-weight: 650;
 }
-
-.main_title {
-    padding-left: 30px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    background-color: var(--blue-themed);
-    border-radius: 20px;
-    color: var(--dark-themed);
-} /* Colocar para a cor mudar lentamente a cada página */
-
-#main_section {
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-}
-
-#main_div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: fit-content;
-    height: fit-content;
-    gap: 30px;
-}
-
-#typado {
-    display: inline;
-} /* Escrita selecionada do JavaScript para rodar a lib Typed.JS *
 
 /* Estilização de fontes para textos e listas */
 h1 {
@@ -102,11 +78,67 @@ li {
     list-style: var(--main-listyle); /* Remove a estilização padrão do CSS para listas */
 }
 
+.main_title {
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: var(--blue-themed);
+    border-radius: 20px;
+    color: var(--dark-themed);
+} /* Colocar para a cor mudar lentamente a cada página */
+
+.hero {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    height: 63.5vh;
+    padding: 2.5rem;
+    color: var(--main-dark-color);
+    background-color: var(--yellow-themed);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    gap: 100px;
+}
+
+.hero-image {
+    width: 30%;
+    height: fit-content;
+    border-radius: 50%;
+}
+
+.hero_text {
+    
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.title {
+    font-family: inherit;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.text {
+    font-family: inherit;
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+#typado {
+    display: inline;
+} /* Escrita selecionada do JavaScript para rodar a lib Typed.JS *
+
 /* CSS da página de projetos. */
 #projects {
     display: flex;
     width: 500%;
-    height: 60vh;
+    height: 63.5vh;
     animation: animacao 20s infinite;
 }
 
@@ -161,13 +193,22 @@ li {
 /* ---------------------------------- */
 
 /* CSS da página de Skills */
+.skills_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 63.5vh;
+    padding: 2.5rem;
+}
+
 #main_graph {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    width: 85%;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     background-color: var(--sec-dark-color);
-    padding: 10px;
+    padding: 35px;
     box-shadow: 5px 5px 4.5px var(--main-dark-color);
     border-top: 1.5px solid var(--dark-themed);
     border-left: 1.5px solid var(--dark-themed);
@@ -177,12 +218,6 @@ li {
 
 #main_graph li {
     width: 100%;
-}
-
-#main_skills {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
 }
 
 .main_text {
@@ -223,30 +258,6 @@ li {
 /* ---------------------------------- */
 
 /* Animação do menu de navegação: [ Sobre mim, Projetos, Habilidades ] */
-.line::before,
-.line::after {
-    content: "";
-    position: absolute;
-    height: 2.5px;
-    background-color: var(--blue-themed);
-    width: 0;
-    transition: 0.5s;
-}
-
-.line::before {
-    bottom: -3px;
-    left: 0;
-}
-
-.line::after {
-    bottom: -3px;
-    right: 0;
-}
-
-.line:hover::before,
-.line:hover::after {
-    width: 100%;
-}
 
 /* CSS da página das Skills */
 .status_bar {
@@ -274,14 +285,39 @@ li {
     animation: python 2.5s ease-in-out 2s 1 both;
 }
 
+.status_bar.react {
+    background-color: var(--aqua-thmed);
+    animation: react 2.5s ease-in-out 2s 1 both;
+}
+
 .status_bar.node {
     background-color: var(--green-themed);
     animation: node 2.5s ease-in-out 2s 1 both;
 }
 
-.status_bar.react {
-    background-color: var(--aqua-thmed);
-    animation: react 2.5s ease-in-out 2s 1 both;
+.status_bar.redes {
+    background-color: var(--dark-themed);
+    animation: redes 2.5s ease-in-out 2s 1 both;
+}
+
+.status_bar.hardware {
+    background-color: var(--dark-themed);
+    animation: hardware 2.5s ease-in-out 2s 1 both;
+}
+
+.status_bar.photoshop {
+    background-color: var(--dark-themed);
+    animation: photoshop 2.5s ease-in-out 2s 1 both;
+}
+
+.status_bar.linux {
+    background-color: var(--dark-themed);
+    animation: linux 2.5s ease-in-out 2s 1 both;
+}
+
+.status_bar.windows {
+    background-color: var(--dark-themed);
+    animation: windows 2.5s ease-in-out 2s 1 both;
 }
 
 @keyframes html {
@@ -325,7 +361,7 @@ li {
         width: 0%;
     }
     to {
-        width: 55%;
+        width: 50%;
     }
 }
 
@@ -335,6 +371,51 @@ li {
     }
     to {
         width: 25%;
+    }
+}
+
+@keyframes redes {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 55%;
+    }
+}
+
+@keyframes hardware {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes photoshop {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 15%;
+    }
+}
+
+@keyframes linux {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes windows {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 45%;
     }
 }
 

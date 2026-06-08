@@ -39,9 +39,9 @@ const sobre = {
 
     typeSpeed: 100, // Velocidade da escrita - Quanto menos mais rápido;
 
-    backSpeed: 200, // Velocidade da deletação - Quanto menos mais rápido;
+    backSpeed: 250, // Velocidade da deletação - Quanto menos mais rápido;
 
-    loop: true, // Se o loop vai acontecer ou não, verdadeiro ou falso para aplicar;
+    // loop: true, // Se o loop vai acontecer ou não, verdadeiro ou falso para aplicar;
 
     showCursor: false, // Mostrar ou não o cursor "a barra no final da frase", verdadeiro ou falso para aplicar;
     
@@ -68,9 +68,9 @@ const projeto = {
 
     typeSpeed: 100,
 
-    backSpeed: 200,
+    backSpeed: 250,
 
-    loop: true,
+    // loop: true,
 
     showCursor: false,
 };
@@ -81,9 +81,9 @@ const habilidade = {
 
     typeSpeed: 100,
 
-    backSpeed: 200,
+    backSpeed: 250,
 
-    loop: true,
+    // loop: true,
 
     showCursor: false,
 };
