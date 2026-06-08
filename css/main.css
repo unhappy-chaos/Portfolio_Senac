@@ -27,7 +27,7 @@
 *{
     margin: 0;
     padding: 0;
-}
+} /* Asterisco se refere a todos elementos do website, zerar a margine o padding é para remover as configurações padrão do navegador envolvendo eles */
 
 main {
     padding: 10px;
@@ -45,7 +45,7 @@ body {
     font-weight: 650;
 }
 
-#main_title {
+.main_title {
     padding-left: 30px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -71,7 +71,6 @@ body {
 
 #typado {
     display: inline;
-    
 } /* Escrita selecionada do JavaScript para rodar a lib Typed.JS *
 
 /* Estilização de fontes para textos e listas */
@@ -104,7 +103,6 @@ li {
 }
 
 /* CSS da página de projetos. */
-
 #projects {
     display: flex;
     width: 500%;
@@ -130,6 +128,7 @@ li {
     max-height: 15em;
 }
 
+/* Animação do carrosel */
 @keyframes animacao {
     0% {
         margin-left: 0%;
@@ -158,10 +157,10 @@ li {
     100% {
         margin-left: -400%;
     }
-} /* Animação do carrosel */
-
+}
 /* ---------------------------------- */
 
+/* CSS da página de Skills */
 #main_graph {
     display: flex;
     flex-direction: column;
@@ -221,9 +220,9 @@ li {
 #main_img:hover figcaption {
     opacity: 1;
 }
+/* ---------------------------------- */
 
-/* Menu de navegação: [ Sobre mim, Projetos, Habilidades ] */
-
+/* Animação do menu de navegação: [ Sobre mim, Projetos, Habilidades ] */
 .line::before,
 .line::after {
     content: "";
@@ -249,75 +248,37 @@ li {
     width: 100%;
 }
 
-
-.side::before {
-    content: "";
-    position: absolute;
-    width: 2.5px;
-    background-color: var(--blue-themed);
-    height: 0%;
-    transition: 0.5s;
-    bottom: 0;
-    left: 0;
-}
-
-.side:hover::before {
-    height: 100%;
-    transition: 0.7s;
-}
-
-.side::after {
-    content: "";
-    position: absolute;
-    width: 2.5px;
-    background-color: var(--blue-themed);
-    height: 0%;
-    transition: 0.5s;
-    top: 0;
-    right: 0;
-}
-
-.side:hover::after {
-    height: 100%;
-    transition: 0.7s;
-}
-
-@keyframes blinker {
-    0% {
-    border: 3px solid transparent;
-}
-    50% {
-    border: 3px solid var(--main-dark-color);
-}
-    100% {
-    border: 3px solid transparent;
-}
-} /* ??? */
-
 /* CSS da página das Skills */
-
 .status_bar {
     display: block;
-    height: 8px;
-    border: 1px solid rgb(0, 255, 136); /* Testar cores para melhor exposição */
+    height: 10px;
 }
 
 .status_bar.html {
     background-color: var(--orange-themed);
     animation: html 2.5s ease-in-out 2s 1 both;
 }
+
 .status_bar.css {
-    background-color: var(--blue-themed);
+    background-color: var(--purple-themed);
     animation: css 2.5s ease-in-out 2s 1 both;
 }
+
 .status_bar.js {
     background-color: var(--yellow-themed);
     animation: js 2.5s ease-in-out 2s 1 both;
 }
+
+.status_bar.python {
+    background-color: var(--blue-themed);
+    animation: python 2.5s ease-in-out 2s 1 both;
+}
+
 .status_bar.node {
     background-color: var(--green-themed);
     animation: node 2.5s ease-in-out 2s 1 both;
 }
+
 .status_bar.react {
     background-color: var(--aqua-thmed);
     animation: react 2.5s ease-in-out 2s 1 both;
@@ -328,10 +289,20 @@ li {
         width: 0%;
     }
     to {
-        width: 90%;
+        width: 50%;
     }
 }
+
 @keyframes css {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 35%;
+    }
+}
+
+@keyframes js {
     from {
         width: 0%;
     }
@@ -339,28 +310,42 @@ li {
         width: 85%;
     }
 }
-@keyframes js {
+
+@keyframes python {
     from {
         width: 0%;
     }
     to {
-        width: 70%;
+        width: 95%;
     }
 }
+
 @keyframes node {
     from {
         width: 0%;
     }
     to {
-        width: 50%;
+        width: 55%;
     }
 }
+
 @keyframes react {
     from {
         width: 0%;
     }
     to {
-        width: 65%;
+        width: 25%;
     }
 }
 
+/* @keyframes blinker {
+    0% {
+    border: 3px solid transparent;
+}
+    50% {
+    border: 3px solid var(--main-dark-color);
+}
+    100% {
+    border: 3px solid transparent;
+}
+} ??? */

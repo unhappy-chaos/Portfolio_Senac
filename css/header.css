@@ -2,7 +2,7 @@ header {
   display: flex;
   flex-direction: row;
   background-color: var(--sec-light-color);
-  justify-content: space-between; /* Quando o slide é trocado para desligado, mexe no posicionamento de tudo, coloque ele em uma caixa que caiba o texto. */
+  justify-content: space-between;
   align-items: center;
   padding: 25px 15px 20px 15px;
 }
@@ -93,23 +93,50 @@ input:checked + .slider:before {
   
 .slider.round:before {
   border-radius: 50%;
-} /* Final do botão toggle */
+} 
+/* Final do botão toggle */
 
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 15px;
+  padding-right: 30px;
   border: 1px solid var(--main-dark-color);
   box-shadow: 1.5px 1.5px 3.5px var(--main-dark-color);
   border-radius: 30px;
   width: 35%;
-  gap: 10px;
   background-color: var(--main-light-color);
 }
 
 .line {
   position: relative;
+}
+
+/* Animação do menu de navegação: [ Sobre mim, Projetos, Habilidades ] */
+.line::before,
+.line::after {
+    content: "";
+    position: absolute;
+    height: 2.5px;
+    background-color: var(--blue-themed);
+    width: 0;
+    transition: 0.5s;
+}
+
+.line::before {
+    bottom: -3px;
+    left: 0;
+}
+
+.line::after {
+    bottom: -3px;
+    right: 0;
+}
+
+.line:hover::before,
+.line:hover::after {
+    width: 100%;
 }
 
 .nav_text {
@@ -127,13 +154,3 @@ nav {
   animation: blinker 2.5s infinite;
   cursor: pointer;
 }
-
-/* @media (max-width: 430px) {
-    header {
-        width: fit-content;
-    } 
-    nav {
-        width: 55%;
-        gap: 15px;
-    }
-  } */ /* i forgor what that was :/ */

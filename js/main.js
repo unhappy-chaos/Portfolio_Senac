@@ -32,22 +32,22 @@ checkbox.addEventListener("change", (evento) => {
     // Chamar função responsável pela troca de temas, entregando "claro" ou "escuro"
 });
 
-//! Utilização da biblioteca typed.js aqui;
-var configuracoes = {
+//! Utilização da biblioteca typed.js aqui:
+const sobre = {
 
-    strings: ["Wow super legal", "Teste 2", "Seriam os demônios capazes de amar ou o amor algo demoníaco?"],
+    strings: ["SOBRE MIM"],
 
-    typeSpeed: 40, // Velocidade da escrita - Quanto menos mais rápido;
+    typeSpeed: 100, // Velocidade da escrita - Quanto menos mais rápido;
 
-    backSpeed: 15, // Velocidade da deletação - Quanto menos mais rápido;
+    backSpeed: 200, // Velocidade da deletação - Quanto menos mais rápido;
 
     loop: true, // Se o loop vai acontecer ou não, verdadeiro ou falso para aplicar;
 
     showCursor: false, // Mostrar ou não o cursor "a barra no final da frase", verdadeiro ou falso para aplicar;
     
-    startDelay: 3000, // Delay para começar a escrever o texto - Quanto menos mais rápido;
+    // startDelay: 100, // Delay para começar a escrever o texto - Quanto menos mais rápido;
 
-    backDelay: 1500, // Delay para começar a deletar o texto após ele ser escrito; - Quanto menos mais rápido;
+    // backDelay: 3000, // Delay para começar a deletar o texto após ele ser escrito; - Quanto menos mais rápido;
 
     // attr: "miau", // https://github.com/mattboldt/typed.js/
 
@@ -62,7 +62,48 @@ var configuracoes = {
     // cursorChar: "|", // Qual vai ser o caractere do cursor;
 };
 
-const escrita = new Typed("#typado", configuracoes); // É obrigatório colocar o "." se for uma classe, caso seja um ID coloque o "#";
-// const projetos =  new Typed(".main_title", comfiguracoes);
-// const escrita2 =  new Typed(".main_title", comfiguracoes);
+const projeto = {
+
+    strings: ["PROJETOS"],
+
+    typeSpeed: 100,
+
+    backSpeed: 200,
+
+    loop: true,
+
+    showCursor: false,
+};
+
+const habilidade = {
+
+    strings: ["HABILIDADES"],
+
+    typeSpeed: 100,
+
+    backSpeed: 200,
+
+    loop: true,
+
+    showCursor: false,
+};
+
+// Como o DOM roda logo assim que o JS é chamado no index.html, as outras páginas não carregaram os elementos de título ainda, portanto abaixo vai trazer um erro no console
+document.getElementById("sobre_mim")
+document.getElementById("projetos")
+document.getElementById("habilidades")
+
+// Para se resolver isso é necessárioo checar se o elemento existe antes de carregar ele e chamar a função, usando apenas o "IF" ele checa se é true, nesse caso, se existe 
+if (document.querySelector("#sobre_mim")) {
+    new Typed("#sobre_mim", sobre);
+}
+
+if (document.querySelector("#projetos")) {
+    new Typed("#projetos", projeto);
+}
+
+if (document.querySelector("#habilidades")) {
+    new Typed("#habilidades", habilidade);
+}
+
 // Primeiro elemento: [ classe ou ID do elemento na onde vai ser escrito o texto ], segundo elemento: [ configurações que você criou ];
