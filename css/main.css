@@ -36,6 +36,8 @@
 main {
     padding: 10px;
     flex: 1;
+    height: 70vh;
+    width: 100%;
 } /* Joga o Footer para baixo tornando o conteúdo do main algo a preencher a tela o suficiente */
 
 body {
@@ -130,16 +132,13 @@ li {
     line-height: 1.5;
 }
 
-#typado {
-    display: inline;
-} /* Escrita selecionada do JavaScript para rodar a lib Typed.JS *
-
 /* CSS da página de projetos. */
 #projects {
     display: flex;
     width: 500%;
     height: 63.5vh;
     animation: animacao 20s infinite;
+    overflow: hidden;
 }
 
 .slide {
@@ -208,12 +207,12 @@ li {
     width: 100%;
     height: 100%;
     background-color: var(--sec-dark-color);
-    padding: 35px;
+    padding: 30px;
     box-shadow: 5px 5px 4.5px var(--main-dark-color);
     border-top: 1.5px solid var(--dark-themed);
     border-left: 1.5px solid var(--dark-themed);
     border-radius: 15px;
-    gap: 15px;
+    gap: 20px;
 }
 
 #main_graph li {
@@ -228,38 +227,7 @@ li {
     color: var(--sec-light-color);
 }
 
-#main_img {
-    display: inline-block;
-    width: 30%;
-    height: 17.5em;
-    position: relative;
-}
-
-#main_img img {
-    width: 100%;
-    border-radius: 15px;
-    height: 100%;
-}
-
-#subtitle {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    background-color: var(--sec-light-color);
-    bottom: 15px;
-    opacity: 0;
-    font-style: italic;
-    transition: 1s;
-}
-
-#main_img:hover figcaption {
-    opacity: 1;
-}
-/* ---------------------------------- */
-
-/* Animação do menu de navegação: [ Sobre mim, Projetos, Habilidades ] */
-
-/* CSS da página das Skills */
+/* CSS do gráfico com animação */
 .status_bar {
     display: block;
     height: 10px;
@@ -361,7 +329,7 @@ li {
         width: 0%;
     }
     to {
-        width: 50%;
+        width: 40%;
     }
 }
 
@@ -418,6 +386,7 @@ li {
         width: 45%;
     }
 }
+/* ---------------------------------- */
 
 /* @keyframes blinker {
     0% {
