@@ -1,16 +1,11 @@
-const translate = document.getElementById("translate");
+function traduz(event) {
+    const elemento = event.target;
 
-translate.addEventListener("click", (traduz) => { //Colocar o event listen para ocorrer no main e ativar a tradução
-    const elemento = traduz.target;
-
-if (elemento.innerText === "En") {
-        console.log(elemento);
+    if (elemento.innerText === "En") {
         elemento.innerText = "Pt-Br";
-        // definir algo aqui como "br"
-
-} else {
+    } else {
         elemento.innerText = "En";
-        // definir algo aqui como "en"
+    }
 }
-// Chamar função responsável pela troca de idiomas, entregando "br" ou "en"
-});
+
+export default traduz
